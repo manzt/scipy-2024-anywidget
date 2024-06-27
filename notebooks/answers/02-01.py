@@ -5,7 +5,7 @@ class Widget(anywidget.AnyWidget):
     function render() {
       console.log("Hello from anywidget!");
     }
-    export deafult { render }
+    export default { render }
     """
 
 Widget()

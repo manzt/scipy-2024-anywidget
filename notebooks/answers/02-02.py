@@ -2,7 +2,7 @@
 
 class Widget(anywidget.AnyWidget):
     _esm = """
-    export function render({ el }) {
+    function render({ el }) {
       const h1 = document.createElement("h1");
       h1.innerHTML = "Hello, anywidget!";
       el.appendChild(h1);

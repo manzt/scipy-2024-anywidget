@@ -2,11 +2,12 @@
 
 class Widget(anywidget.AnyWidget):
     _esm = """
-    export function render({ model, el }) {
+    function render({ model, el }) {
         const btn = document.createElement("button");
         btn.innerText = `Count is ${model.get("count")}`;
         el.appendChild(btn);
     }
+    export default { render };
     """
     count = traitlets.Int(0).tag(sync=True)
 

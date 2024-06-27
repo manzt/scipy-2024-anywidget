@@ -4,7 +4,7 @@ class ConfettiWidget(anywidget.AnyWidget):
     _esm = """
     import confetti from "https://esm.sh/canvas-confetti@1";
 
-    export function render({ model, el }) {
+    function render({ model, el }) {
         const btn = document.createElement("button");
         btn.innerText = `Count is ${model.get("count")}`;
         btn.addEventListener("click", () => {
