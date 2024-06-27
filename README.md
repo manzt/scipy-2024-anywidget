@@ -21,7 +21,7 @@ cd scipy-2024-anywidget
 
 **Using Conda**:
 ```bash
-conda env create -f environment.yaml
+conda env create -f environment.yml
 conda activate anywidget-tutorial
 ```
 
