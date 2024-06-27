@@ -7,3 +7,4 @@ wheels/
 *.egg-info
 .venv
 .ipynb_checkpoints/
+notebooks/index.js
