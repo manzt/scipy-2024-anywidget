@@ -5,6 +5,7 @@ build/
 dist/
 wheels/
 *.egg-info
+
+# venv
 .venv
 .ipynb_checkpoints/
-notebooks/index.js
