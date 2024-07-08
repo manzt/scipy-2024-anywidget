@@ -22,10 +22,10 @@ function draw(canvas, { detections, color, landmarkColor }) {
 
 let formats = await BarcodeDetector.getSupportedFormats();
 function createDetector(kind) {
-    return {
-        "face": new FaceDetector(),
-        "barcode": new BarcodeDetector({ formats }),
-    }[kind];
+    if (kind === "face") {
+        return new window.FaceDetector();
+    }
+    return new BarcodeDetector({ formats });
 }
 
 async function render({ model, el }) {
