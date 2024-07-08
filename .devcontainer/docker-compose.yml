@@ -1,0 +1,10 @@
+version: '2'
+services:
+  anywidget-tutorial:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+
+    # We need a command that keeps running forever.
+    # Otherwise the container would stop, and vs code would close.
+    command: sleep infinity

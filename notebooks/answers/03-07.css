@@ -1,0 +1,10 @@
+.ipymario > canvas {
+    padding: 12px;
+    animation-fill-mode: both;
+    image-rendering: pixelated; /* Ensures the image stays pixelated */
+}
+
+@keyframes ipymario-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}:w

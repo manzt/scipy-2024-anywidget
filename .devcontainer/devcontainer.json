@@ -1,0 +1,33 @@
+{
+    "name": "anywidget-tutorial",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "anywidget-tutorial",
+    "customizations": {
+      "codespaces": {
+        "openFiles": ["notebooks/01-intro.ipynb"]
+      },
+      "vscode": {
+        "settings": {
+          "extensions.ignoreRecommendations": true,
+          "notifications.hideList": true,
+          "notifications.hideToasts": true,
+          "notifications.doNotDisturbMode": true,
+          "update.showReleaseNotes": false,
+          "vsicons.dontShowNewVersionMessage": true,
+          "workbench.welcomePage.walkthroughs.openOnInstall": false,
+          "python.defaultInterpreterPath": "/usr/local/bin/python",
+          "jupyter.kernels.excludePythonEnvironments": [
+            "/usr/bin/python3",
+            "/bin/python3"
+          ]
+        },
+        "extensions": [
+          "ms-toolsai.jupyter",
+          "ms-python.python",
+          "donjayamanne.vscode-default-python-kernel"
+        ]
+      }
+    },
+    "features": {
+    }
+  }
