@@ -2,18 +2,17 @@
 
 class Widget(anywidget.AnyWidget):
     _esm = """
-    function chime({ duration, gain }) {
-      let c = new AudioContext();
-      let g = c.createGain();
-      let o = c.createOscillator();
-      let of = o.frequency;
+    function chime({ duration, tone1, tone2 }) {
+      const c = new AudioContext();
+      const g = c.createGain();
+      const o = c.createOscillator();
       g.connect(c.destination);
-      g.gain.value = gain;
+      g.gain.value = 0.1;
       g.gain.linearRampToValueAtTime(0, duration);
       o.connect(g);
       o.type = "square";
-      of.setValueAtTime(988, 0);
-      of.setValueAtTime(1319, 0.08);
+      o.frequency.setValueAtTime(tone1, 0);
+      o.frequency.setValueAtTime(tone2, 0.08);
       o.start();
       o.stop(duration);
     }
@@ -21,7 +20,7 @@ class Widget(anywidget.AnyWidget):
       const btn = document.createElement("button");
       btn.innerText = "It's me Mario!";
       btn.addEventListener("click", () => {
-        chime({ duration: model.get("duration"), gain: model.get("gain") });
+        chime({ duration: model.get("duration"), tone1: model.get("tone1"), tone2: model.get("tone2") });
       });
       model.on("msg:custom", (msg) => {
         if (msg?.kind === "click") btn.click();
@@ -31,10 +30,12 @@ class Widget(anywidget.AnyWidget):
     export default { render };
     """
     duration = traitlets.Float(1.0).tag(sync=True)
-    gain = traitlets.Float(0.1).tag(sync=True)
+    tone1 = traitlets.Int(988).tag(sync=True)
+    tone2 = traitlets.Int(1319).tag(sync=True)
 
     def click(self):
         self.send({ "kind": "click" })
 
 widget = Widget()
 widget
+
