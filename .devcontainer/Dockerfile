@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/vscode/devcontainers/python:3.11
 
-COPY codespace_requirements.txt /
+COPY requirements.txt /
 
 RUN apt-get update -y
 
