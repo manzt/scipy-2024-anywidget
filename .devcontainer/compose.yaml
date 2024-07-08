@@ -1,5 +1,0 @@
-services:
-  anywidget-tutorial:
-    build:
-      context: ..
-      dockerfile: .devcontainer/Dockerfile
