@@ -1,6 +1,7 @@
 {
-    "build": { "dockerfile": "Dockerfile" },
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "name": "anywidget-tutorial",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "anywidget-tutorial",
     "customizations": {
       "codespaces": {
         "openFiles": ["notebooks/01-intro.ipynb"]
