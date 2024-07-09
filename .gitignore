@@ -6,6 +6,9 @@ dist/
 wheels/
 *.egg-info
 
+notebooks/index.js
+notebooks/styles.css
+
 # venv
 .venv
 .ipynb_checkpoints/
