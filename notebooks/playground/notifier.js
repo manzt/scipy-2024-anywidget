@@ -5,10 +5,6 @@ if (Notification.permission === "denied") {
 async function dispatch(news) {
     if (!news) return;
     let { message, ...options } = news;
-    if (options.icon instanceof DataView) {
-        let blob = new Blob([options.icon], { type: "image/jpeg" });
-        options.icon = URL.createObjectURL(blob);
-    }
     if (Notification.permission === "denied") {
         await Notification.requestPermission();
     }
