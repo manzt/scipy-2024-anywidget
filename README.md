@@ -4,6 +4,8 @@ Welcome! This repository contains the source material for the **anywidget**
 tutorial to be presented at SciPy 2024. We will be using **JupyterLab** for all
 tutorial materials.
 
+An overview of the content can be found at [notebooks/index.ipynb](notebooks/index.ipynb).
+
 ### Quick Start
 
 > [!WARNING]
