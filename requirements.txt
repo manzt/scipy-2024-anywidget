@@ -7,3 +7,5 @@ anywidget==0.9.13
 watchfiles==0.22.0
 ipywidgets==8.1.3
 jupyterlab==4.2.2
+drawdata==0.3.3
+scikit-learn==1.5.1
